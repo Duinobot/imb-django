@@ -1,0 +1,18 @@
+{% extends 'user/base.html' %}
+{% block nav %}
+          <form class="d-flex" action="{% url 'logout' %}" method="POST">
+               {% csrf_token %}
+               <button class="btn btn-danger" type="submit">Logout</button>
+          </form>
+{% endblock nav %}
+
+{% block content %}
+
+          <h1 style="text-align: center;" >
+              welcome back {{response.data.firstname}}
+               {{response.data.lastname}} 
+          </h1>
+     <a href="{% url 'addresses' %}" type="button" style="text-align: center;" class="btn btn-info">get addresses</a>
+
+
+{% endblock content %}

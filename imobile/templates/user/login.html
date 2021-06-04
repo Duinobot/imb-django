@@ -1,48 +1,26 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-     <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Document</title>
-          <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-          <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-          <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-          <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-          <link rel="stylesheet" href="{% static 'user/css/login.css' %}">
-     </head>
+{% extends 'user/base.html' %}
 
-     <body>  
-          <form action="{% url 'login' %}" method="post">
-               {% csrf_token %}
-               <div class="container">
-                    <div class="row">
-                         <div class="col-md-offset-5 col-md-3">
-                              <div class="form-login">
-                              <h4>Welcome back.</h4>
+{% block content %}
+     <form action="{% url 'login' %}" method="post">
+          {% csrf_token %}
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-offset-5 col-md-3">
+                         <div class="form-login">
+                              <h4>Welcome back - please login</h4>
                               <input type="text" name="email" id="email" class="form-control input-sm chat-input" placeholder="username" />
                               </br>
                               <input type="text" name="password" id="password" class="form-control input-sm chat-input" placeholder="password" />
                               </br>
                               <div class="wrapper">
-                              <span class="group-btn">     
-                                   <button type="submit" class="btn btn-primary btn-md"> login <i class="fa fa-sign-in"></i></button>
-                              </span>
+                                   <span class="group-btn">     
+                                        <button type="submit" class="btn btn-primary btn-md"> login <i class="fa fa-sign-in"></i></button>
+                                   </span>
                               </div>
-                              </div>
-                         
                          </div>
                     </div>
                </div>
-          </form>
-     </body>
-</html>
+          </div>
+     </form>
 
-
-
-
-
-
-
-
-
+{% endblock content %}
