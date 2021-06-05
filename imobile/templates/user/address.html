@@ -4,57 +4,43 @@
                <table class="table">
                <thead>
                <tr>
-                    <th scope="col">fields</th>
-                    <th scope="col">value</th>
+                    <th scope="col">address_id</th>
+                    <th scope="col">firstname</th>
+                    <th scope="col">lastname</th>
+                    <th scope="col">company</th>
+                    <th scope="col">address_1</th>
+                    <th scope="col">address_2</th>
+                    <th scope="col">postcode</th>
+                    <th scope="col">city</th>
+                    <th scope="col">zone_id</th>
+                    <th scope="col">zone_code</th>
+                    <th scope="col">country_id</th>
+                    <th scope="col">country</th>
+                    <th scope="col">iso_code_2</th>
+                    <th scope="col">iso_code_3</th>
+                    <!-- <th scope="col">address_format</th> -->
                </tr>
                </thead>
                <tbody>
-                    {% for data in  address.data.addresses %}                    
-                    <tr>
+                    {% for data in  address.data.addresses %}       
+                    <tr> 
                          <td>{{data.address_id}}</td>
-                    </tr>
-                    <tr>
                          <td>{{data.firstname}}</td>
-                    </tr>
-                    <tr>
                          <td>{{data.lastname}}</td>
-                    </tr>
-                    <tr>
                          <td>{{data.company}}</td>
-                    </tr>
-                    <tr>
                          <td>{{data.address_1}}</td>
-                    </tr>
-                    <tr>
                          <td>{{data.address_2}}</td>
-                    </tr>
-                    <tr>
                          <td>{{data.postcode}}</td>
-                    </tr>
-                    <tr>
                          <td>{{data.city}}</td>
-                    </tr>
-                    <tr>
                          <td>{{data.zone_id}}</td>
-                    </tr>
-                    <tr>
                          <td>{{data.zone_code}}</td>
-                    </tr>
-                    <tr>
                          <td>{{data.country_id}}</td>
-                    </tr>
-                    <tr>
                          <td>{{data.country}}</td>
-                    </tr>
-                    <tr>
                          <td>{{data.iso_code_2}}</td>
-                    </tr>
-                    <tr>
                          <td>{{data.iso_code_3}}</td>
+                         <!-- <td>{{data.address_format}}</td> -->
                     </tr>
-                    <tr>
-                         <td>{{data.address_format}}</td>
-                    </tr>
+                    <!-- {{data}} -->
                     {% endfor %}
                </tbody>
                </table>
